@@ -6,9 +6,15 @@
     <title>REDMS - Coming Soon</title>
     <link rel="icon" type="image/png" href="logo1.png">
     <style>
-        body {
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box; /* Prevent margin/padding overflow */
+        }
+        html, body {
+            height: 100%;
+        }
+        body {
             font-family: 'Arial', sans-serif;
             color: #213A65;
             background: url('banner03.png') no-repeat center center fixed;
@@ -17,7 +23,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            overflow: hidden; /* Prevent scrollbar from appearing */
         }
         .container {
             display: flex;
@@ -38,7 +44,7 @@
             padding: 20px;
         }
         .logo-block img {
-            max-width: 25%; /* Reduced size */
+            max-width: 20%; /* Further reduced size */
             height: auto;
         }
         .slogan-block {
@@ -64,7 +70,7 @@
             background: rgba(33, 58, 101, 0.8);
             font-size: 0.8em;
             color: #FAC40D;
-            position: absolute;
+            position: fixed;
             bottom: 0;
             width: 100%;
         }
@@ -98,3 +104,4 @@
     </div>
 </body>
 </html>
+
